@@ -1,7 +1,7 @@
 public String aOrAn(String word) {
     //code here
 
-    if(word.CharAt[0] == 97 || word.CharAt[0] == 101 || word.CharAt[0] == 105 || word.CharAt == 111 || word.CharAt == 117){
+    if(word.charAt(0) == 97 || word.charAt(0) == 101 || word.charAt(0) == 105 || word.charAt(0) == 111 || word.charAt(0) == 117){
         return 'an '+word;
     }
     else{
