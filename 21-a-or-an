@@ -1,0 +1,10 @@
+public String aOrAn(String word) {
+    //code here
+
+    if(word.CharAt[0] == 'a' || word.CharAt[0] == 'e' || word.CharAt[0] == 'i' || word.CharAt == 'o' || word.CharAt == 'u'){
+        return 'an '+word;
+    }
+    else{
+        return 'a '+word;
+    }
+}
