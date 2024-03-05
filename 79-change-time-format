@@ -14,9 +14,15 @@ public String changeTimeFormat(String strTime) {
             time1 = hour+':'+min+' PM';
         }
     }
-    else if(hour == 0){
+    else if(hour == 0 || hour == 12){
         hour1 =  '12';
-        time1 = hour1+':'+min+' AM';
+        if(hour == 0){
+            time1 = hour1+':'+min+' AM';
+        }
+        else{
+            time1 = hour1+':'+min+' PM'
+        }
+        
     }
     else{
         hour1 =  '0'+String.valueOf(hour);
