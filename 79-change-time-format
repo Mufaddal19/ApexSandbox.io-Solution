@@ -20,7 +20,7 @@ public String changeTimeFormat(String strTime) {
             time1 = hour1+':'+min+' AM';
         }
         else{
-            time1 = hour1+':'+min+' PM'
+            time1 = hour1+':'+min+' PM';
         }
         
     }
