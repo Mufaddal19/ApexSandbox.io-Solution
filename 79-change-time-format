@@ -2,25 +2,25 @@ public String changeTimeFormat(String strTime) {
     //code here
     Integer hour = Integer.valueOf(strTime.substringBefore(':'));
     String min = strTime.substringAfter(':');
-    String time, hour1;
+    String time1, hour1;
 
     if(hour > 12){
         hour = hour - 12;
         if(hour < 10){
             hour1 =  '0'+String.valueOf(hour);
-            time = hour1+':'+min+' PM';
+            time1 = hour1+':'+min+' PM';
         }
         else{
-            time = hour+':'+min+' PM';
+            time1 = hour+':'+min+' PM';
         }
     }
     else if(hour == 0){
         hour1 =  '12';
-        time = hour1+':'+min+' AM';
+        time1 = hour1+':'+min+' AM';
     }
     else{
         hour1 =  '0'+String.valueOf(hour);
-        time = hour1+':'+min+' AM';
+        time1 = hour1+':'+min+' AM';
     }
-    return time;
+    return time1;
 }
