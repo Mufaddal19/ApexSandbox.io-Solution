@@ -4,7 +4,21 @@ public String changeTimeFormat(String strTime) {
     String min = strTime.substringAfter(':');
     String time1, hour1;
 
-    if(hour > 12){
+    if(hour == 0){
+        hour1 =  '12';
+        time1 = hour1+':'+min+' AM';
+    }
+    else if(hour < 10){
+        hour1 = '0'+String.valueOf(hour);
+        time1 = hour1+':'+min+' AM';
+    }
+    else if(hour < 12){
+        time1 = hour+':'+min+' AM';
+    }
+    else if(hour == 12){
+        time1 = hour+':'+min+' PM';
+    }
+    else{
         hour = hour - 12;
         if(hour < 10){
             hour1 =  '0'+String.valueOf(hour);
@@ -13,20 +27,6 @@ public String changeTimeFormat(String strTime) {
         else{
             time1 = hour+':'+min+' PM';
         }
-    }
-    else if(hour == 0){
-        hour1 =  '12';
-        time1 = hour1+':'+min+' AM';
-    }
-    else{
-        if(hour < 10){
-            hour1 =  '0'+String.valueOf(hour);
-            time1 = hour1+':'+min+' AM';
-        }
-        else{
-            time1 = hour+':'+min+' AM';
-        }
-        
     }
     return time1;
 }
