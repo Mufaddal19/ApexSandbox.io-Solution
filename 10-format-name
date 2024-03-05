@@ -1,4 +1,4 @@
 public String formatName(String firstName, String lastName) {
     //code here
-    return firstName == null ? lastName : lastName == null ? firstName : lastName+', '+firstName;
+    return firstName == null || firstName == '' ? lastName : lastName == null || lastName == '' ? firstName : lastName+', '+firstName;
 }
