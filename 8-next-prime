@@ -8,7 +8,7 @@ public Integer nextPrime(Integer num) {
 
     do{
         for(Integer i = 2; i < num + 1 ; i++){
-            if(Math.mod(num,i) == 0){
+            if(Math.mod(num+1,i) == 0){
                 num++;
                 isPrime = false;
                 break;
