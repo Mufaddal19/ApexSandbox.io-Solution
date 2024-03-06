@@ -12,7 +12,7 @@ public String reverseWordsInASentence(String sentence){
         String rev =words[n-1];
 
         for(Integer i = n-2 ; i>=0 ; i--){    
-            rev += ' '+l[i];
+            rev += ' '+words[i];
         }
         return rev;
     }
