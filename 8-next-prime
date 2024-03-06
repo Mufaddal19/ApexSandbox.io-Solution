@@ -19,5 +19,5 @@ public Integer nextPrime(Integer num) {
         }      
     }
     while(isPrime == false);
-    return num;
+    return num + 1;
 }
