@@ -4,11 +4,10 @@ public Integer nextPrime(Integer num) {
     if(num < 2){
         return 2;
     }
-
-
+    num++;
     do{
-        for(Integer i = 2; i < num + 1 ; i++){
-            if(Math.mod(num+1,i) == 0){
+        for(Integer i = 2; i < num ; i++){
+            if(Math.mod(num,i) == 0){
                 num++;
                 isPrime = false;
                 break;
@@ -19,5 +18,5 @@ public Integer nextPrime(Integer num) {
         }      
     }
     while(isPrime == false);
-    return num + 1;
+    return num;
 }
