@@ -4,5 +4,7 @@ public String registerStudent(String name, String phone, String email) {
 
     insert s;
 
-    return String.valueOf([SELECT apxio__Registration_Number__c FROM apxio__Student__c WHERE Id = :s.Id]);
+    apxio__Student__c s1 = [SELECT apxio__Registration_Number__c FROM apxio__Student__c WHERE Id = :s.Id];
+
+    return s1.apxio__Registration_Number__c;
 }
