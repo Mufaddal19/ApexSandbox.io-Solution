@@ -1,9 +1,10 @@
 public void enrollStudents(List<String> emails, String className) {
     // code here
     List<apxio__Student__c> sList = [SELECT Id FROM apxio__Student__c WHERE apxio__Email__c IN :emails];
+    List<apxio__Class__c> clsList = [SELECT Id FROM apxio__Class__c WHERE Name = className];
     List<apxio__Class_Enrollment__c> enrList = new List<apxio__Class_Enrollment__c>();
     for(apxio__Student__c s : sList){
-        apxio__Class_Enrollment__c objEnroll = new apxio__Class_Enrollment__c(apxio__Student__c = s.Id, apxio__Offered_Class__c = className);
+        apxio__Class_Enrollment__c objEnroll = new apxio__Class_Enrollment__c(apxio__Student__c = s.Id, apxio__Offered_Class__c = clsList.get(0).Id);
         enrList.add(objEnroll);
     }
     insert enrList;
