@@ -12,7 +12,7 @@ public List<Account> checkAccounts(List<Account> accounts)
         }
     }
     }
-    catch(Exception e){
+    catch(System.IllegalArgumentException e){
         return e.message();
     }
     if (accList.equals(accounts)){
