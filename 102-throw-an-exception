@@ -2,14 +2,12 @@ public List<Account> checkAccounts(List<Account> accounts)
 {
     List<Account> accList = new List<Account>();
     // code here
-    try{
-        for(Account acc : accounts){
-        if (acc.BillingCity == null) throw new AccountException('Invalid BillingCity');
+    
+    if (accounts == null) throw new IllegalArgumentException ('accounts should not be null');
+
+    for(Account acc : accounts){
+        if (acc?.BillingCity == null) throw new AccountException('Invalid BillingCity');
         accList.add(acc);
-    }
-    }
-    catch(Exception e){
-        return e.message();
     }
     if (accList.equals(accounts)){
         return accounts;
