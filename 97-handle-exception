@@ -6,6 +6,6 @@ public String divide(Integer a, Integer b){
     }
     catch (Exception e){
         System.debug('An exception occurred: ' + e.getMessage());
-        return 'Divide by 0';
+        return e.getMessage();
     }
 }
