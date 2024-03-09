@@ -7,8 +7,8 @@ public List<Account> checkAccounts(List<Account> accounts)
         if (acc.BillingCity != null) throw new AccountException('Invalid BillingCity');
     }
     }
-    catch(Exception e){
-        return e.message();
+    catch(AccountException me){
+        return me.message();
     }
     if (accList.equals(accounts)){
         return accounts;
