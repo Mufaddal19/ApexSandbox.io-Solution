@@ -1,10 +1,11 @@
 public String divide(Integer a, Integer b){
     //code here
     try{
-        Integer c = a/b;
-        return ''+c;
+        String c = String.valueOf(a/b);
+        return c;
     }
-    catch{
+    catch (Exception e){
+        System.debug('An exception occurred: ' + e.getMessage());
         return 'Divide by 0';
     }
 }
