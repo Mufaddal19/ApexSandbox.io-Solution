@@ -6,12 +6,13 @@ public List<Account> checkAccounts(List<Account> accounts)
     if (accounts == null) throw new IllegalArgumentException ('accounts should not be null');
 
     for(Account acc : accounts){
-        if (acc?.BillingCity == null) throw new AccountException('Invalid BillingCity');
+        if (acc.BillingCity == null) throw new AccountException('Invalid BillingCity');
         accList.add(acc);
     }
     if (accList.equals(accounts)){
-        return accounts;
+        return accList;
     }
+    return null;
 }
 
 //do not remove the following custom-defined exception
