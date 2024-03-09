@@ -3,16 +3,11 @@ public List<Account> checkAccounts(List<Account> accounts)
     List<Account> accList = new List<Account>();
     // code here
     try{
-    for(Account acc : accounts){
-        if (acc.BillingCity != null or acc.BillingCity != ''){
-            accList.add(acc);
-        }
-        else{
-            throw new AccountException('Invalid BillingCity');
-        }
+        for(Account acc : accounts){
+        if (acc.BillingCity != null) throw new AccountException('Invalid BillingCity');
     }
     }
-    catch(System.IllegalArgumentException e){
+    catch(Exception e){
         return e.message();
     }
     if (accList.equals(accounts)){
