@@ -1,0 +1,10 @@
+public List<String> getFieldsValue(Account acc, List<String> fields)
+{
+    // code here
+    String queryStr = 'SELECT Id'
+    For(String str : fields){
+        queryStr += ',' + str + ' ';
+    }
+    queryStr += 'FROM Account WHERE Id=\''+acc.id+'\''; 
+    List<Account> sobjList = Database.query(queryStr);
+}
