@@ -1,0 +1,9 @@
+public void validateInsert(List<Opportunity> opportunities){
+    //code here
+    for(Opportunity opp : opportunities){
+        if(opp.StageName == 'Closed Won' && (opp.Description = null or opp.Description = '')){
+            // Add Error
+            opp.addError('Description','Description should not be empty for Closed Won opportunity.')
+        }
+    }
+}
