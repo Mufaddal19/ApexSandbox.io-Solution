@@ -12,8 +12,23 @@ public List<Account> getAccounts(List<Account> accounts) {
 public class AccountWrapper implements Comparable{
     Account account;
     Integer AnnualRevenue;
+
     public AccountWrapper(Account acc){
         account = acc;
         AnnualRevenue = acc.AnnualRevenue;
+    }
+
+    public Integer compareTo(Object compareTo){
+        AccountWrapper otherAcc = (AccountWrapper)compareTo;
+
+        if (AnnualRevenue == otherAcc.AnnualRevenue){
+            return 0;
+        }
+        else if(AnnualRevenue > otherAcc.AnnualRevenue){
+            return 1;
+        }
+        else{
+            return -1;
+        }
     }
 }
