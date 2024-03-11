@@ -15,7 +15,7 @@ public class AccountWrapper implements Comparable{
 
     public AccountWrapper(Account acc){
         account = acc;
-        AnnualRevenue = acc.AnnualRevenue;
+        AnnualRevenue = Integer.valueOf(acc.AnnualRevenue);
     }
 
     public Integer compareTo(Object compareTo){
