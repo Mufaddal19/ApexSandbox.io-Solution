@@ -6,10 +6,10 @@ public List<Account> getAccounts(List<Account> accounts) {
         accWrapperList.add(new AccountWrapper(acc));
     }
     accWrapperList.sort();
-    /*for(AccountWrapper account : accWrapperList){
-        accList.add(new Account(account));
-    }*/
-    return (List<Account>)accWrapperList;
+    for(AccountWrapper accWrapper : accWrapperList){
+        accList.add(accWrapper.account);
+    }
+    return accList;
 }
 // write extra class here 
 public class AccountWrapper implements Comparable{
