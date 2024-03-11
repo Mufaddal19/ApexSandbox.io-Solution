@@ -2,23 +2,23 @@ public List<Account> getAccounts(List<Account> accounts) {
     // code here
     List<AccountWrapper> accWrapperList = new List<AccountWrapper>();
     List<Account> accList = new List<Account>;
-    for(Account acc : accounts){
-        accWrapperList.add(new AccountWrapper(acc));
+    for(Account a : accounts){
+        accWrapperList.add(new AccountWrapper(a));
     }
     accWrapperList.sort();
     for(AccountWrapper accWrapper : accWrapperList){
-        accList.add(accWrapper.account);
+        accList.add(accWrapper.acct);
     }
     return accList;
 }
 // write extra class here 
 public class AccountWrapper implements Comparable{
-    Account account;
+    public Account acct;
     String Name;
     Integer AnnualRevenue;
 
     public AccountWrapper(Account acc){
-        account = acc;
+        acct = acc;
         Name = acc.Name;
         AnnualRevenue = Integer.valueOf(acc.AnnualRevenue);
     }
