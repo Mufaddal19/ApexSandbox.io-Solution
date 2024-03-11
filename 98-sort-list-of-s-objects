@@ -1,0 +1,19 @@
+public List<Account> getAccounts(List<Account> accounts) {
+    // code here
+    List<AccountWrapper> accWrapperList = new List<AccountWrapper>();
+
+    for(Account acc : accounts){
+        accWrapperList.add(new AccountWrapper(acc));
+    }
+    accWrapperList.sort(AnnualRevenue);
+    return accWrapperList;
+}
+// write extra class here 
+public class AccountWrapper implements Comparable{
+    Account account;
+    Integer AnnualRevenue;
+    public AccountWrapper(Account acc){
+        account = acc;
+        AnnualRevenue = acc.AnnualRevenue;
+    }
+}
