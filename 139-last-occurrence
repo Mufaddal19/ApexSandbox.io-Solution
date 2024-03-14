@@ -1,6 +1,6 @@
 public static Integer findLast(List<Integer> nums, Integer target) {
    // code here
-   Integer lastIndex = 0;
+   Integer lastIndex = -1;
    for(Integer i=0;i<nums.size();i++)
    {
        if(nums.get(i) == target){
