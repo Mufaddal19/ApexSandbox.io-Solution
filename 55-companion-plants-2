@@ -1,15 +1,22 @@
 public Boolean companionPlants(List<String> plants) {
     //code here
     Map<String,List<String>> compPlantMap = new Map<String,List<String>>();
-    compPlantMap.put('lettuce',new List<String>('cucumbers','onions'));
-    compPlantMap.put('onions',new List<String>('lettuce','carrots','tomatoes'));
-    compPlantMap.put('cucumbers',new List<String>('lettuce'));
-    compPlantMap.put('tomatoes',new List<String>('onions'));
-    compPlantMap.put('carrots',new List<String>('onions'));
+    compPlantMap.put('lettuce',new List<String>{'cucumbers','onions'});
+    compPlantMap.put('onions',new List<String>{'lettuce','carrots','tomatoes'});
+    compPlantMap.put('cucumbers',new List<String>{'lettuce'});
+    compPlantMap.put('tomatoes',new List<String>{'onions'});
+    compPlantMap.put('carrots',new List<String>{'onions'});
 
     if(plants.isEmpty()) return true;
     if(plants.size() == 1) return false;
 
-
+        for(Integer i = 0; i < plants.size() - 1; i++){
+        if(!compPlantMap.containsKey(plants[i])){
+            if(!compPlantMap.get(plants[i]).contains(plants[i+1]){
+                return false;
+            }
+        }
+    }
+    return true;
 
 }
