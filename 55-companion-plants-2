@@ -11,11 +11,10 @@ public Boolean companionPlants(List<String> plants) {
     if(plants.size() == 1) return false;
 
     for(Integer i = 0; i < plants.size() - 1; i++){
-        if(!compPlantMap.containsKey(plants[i])){
             if(!compPlantMap.get(plants[i]).contains(plants[i+1])){
                 return false;
             }
-        }
+        
     }
     return true;
 
