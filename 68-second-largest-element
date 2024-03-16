@@ -9,6 +9,9 @@ public Integer secondLargest(List<Integer> numbers) {
                 secondLargest = largest;
                 largest = num;
             }
+            else{
+                secondLargest = num;
+            }
         }
     }
     return secondLargest;
