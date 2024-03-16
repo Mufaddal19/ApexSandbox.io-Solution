@@ -9,11 +9,11 @@ public List<Integer> fibonacciSeries(Integer n) {
         fibList.add(1);
         currValue = 1;
     }
-    if(n == 2){
+    if(n == 2 || n > 2){
         fibList.add(1);
         lastValue = 1;
     }
-    for(Integer i = 3; i < n; i++){   
+    for(Integer i = 3; i <= n; i++){   
         newValue = currValue + lastValue;
         lastValue = currValue;
         currValue = newValue;
