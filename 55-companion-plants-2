@@ -4,7 +4,6 @@ public Boolean companionPlants(List<String> plants) {
     for(Integer i=0; i<plants.size(); i++){
         if(plants[i] == 'lettuce'){
             if(plants[i+1]) == 'onions' || plants[i+1] == 'cucumbers'){
-                continue;
             }
             else{
                 isCompanion = false;
@@ -13,7 +12,7 @@ public Boolean companionPlants(List<String> plants) {
         }
         else if(plants[i] == 'onions'){
             if(plants[i+1]) == 'carrots' || plants[i+1] == 'lettuce' || plants[i+1] == 'tomatoes'){
-                continue;
+
             }
             else{
                 isCompanion = false;
@@ -22,7 +21,7 @@ public Boolean companionPlants(List<String> plants) {
         }
         else if(plants[i] == 'carrots' || plants[i] == 'tomatoes'){
             if(plants[i+1]) == 'onions'){
-                continue;
+
             }
             else{
                 isCompanion = false;
@@ -31,7 +30,7 @@ public Boolean companionPlants(List<String> plants) {
         }
         else if(plants[i] == 'cucumbers'){
             if(plants[i+1]) == 'lettuce'){
-                continue;
+
             }
             else{
                 isCompanion = false;
