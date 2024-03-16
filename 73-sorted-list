@@ -3,7 +3,7 @@ public boolean isSorted(List<Integer> numbers) {
     Boolean isDesc = true;
     Boolean isAsc = true;
     for(Integer i = 0; i < numbers.size() - 1; i++){
-        if(numbers[i] < numbers[i+1]){
+        if(numbers[i] <= numbers[i+1]){
             continue;
         }
         else{
@@ -12,7 +12,7 @@ public boolean isSorted(List<Integer> numbers) {
         }
     }
     for(Integer i = 0; i < numbers.size() - 1; i++){
-        if(numbers[i] > numbers[i+1]){
+        if(numbers[i] >= numbers[i+1]){
             continue;
         }
         else{
