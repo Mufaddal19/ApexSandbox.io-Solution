@@ -1,0 +1,23 @@
+public List<Integer> fibonacciSeries(Integer n) {
+    //code here
+    List<Integer> fibList = new List<Integer>();
+    Integer currValue = 0;
+    Integer lastValue = 0;
+    Integer newValue = 0;
+
+    if(n == 1 || n > 1){
+        fibList.add(1);
+        currValue = 1;
+    }
+    for(n == 2){
+        fibList.add(1);
+        lastValue = 1;
+    }
+    for(Integer i = 3; i < n; i++){   
+        newValue = currValue + lastValue;
+        lastValue = currValue;
+        currValue = newValue;
+        fibList.add(newValue);
+    }
+    return fibList;
+}
