@@ -1,6 +1,8 @@
 public Boolean sameElements(List<Integer> nums1, List<Integer> nums2) {
     //code here
     Set<Integer> s1 = new Set<Integer>();
+    Set<Integer> s2 = new Set<Integer>();
     s1.addAll(nums1);
-    return s1.containsAll(nums2);
+    s2.addAll(nums2);
+    return s1.containsAll(nums2) && s2.containsAll(nums1);
 }
