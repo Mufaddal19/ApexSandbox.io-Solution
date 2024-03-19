@@ -9,17 +9,17 @@ public class Stack {
     
     public Object pop() {
         //implement pop
-        return objStack.remove(objStack.size()-1);
+        return objStack.isEmpty() ? null : objStack.remove(objStack.size()-1);
     }
     
     public Integer size() {
         //implement size
-        return objStack?.size();
+        return objStack.size();
     }
     
     public Object peek(){
         //implement peek
-        return objStack.get(objStack.size()-1);
+        return objStack[objStack.size()-1];
     }
     
     public Boolean isEmpty() {
