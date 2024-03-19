@@ -5,7 +5,7 @@ public class Stack {
     
     public void push(Object obj) {
         //implement push
-        objStack.add(obj);
+        objStack?.add(obj);
         index++;
     }
     
@@ -13,21 +13,21 @@ public class Stack {
         //implement pop
         temp = index;
         index--;
-        return objStack.remove(temp);
+        return objStack?.remove(temp);
     }
     
     public Integer size() {
         //implement size
-        return objStack.size();
+        return objStack?.size();
     }
     
     public Object peek(){
         //implement peek
-        return objStack.get(index);
+        return objStack?.get(index);
     }
     
     public Boolean isEmpty() {
         //implement isEmpty
-        return objStack.isEmpty();
+        return objStack?.isEmpty();
     }
 }
