@@ -2,57 +2,78 @@ public class LinkedList{
     
     Node head;
     Node tail;
-    Integer temp;
     Integer size;
 
     public LinkedList(){
         head = null;
         tail = null;
-        temp = 0;
         size = 0;
     }
 
     public void addToFront(Integer value){
         Node nd = new Node();
+        nd.data = value;
+
         if(head == null){
-            head.data = value;
-            size++;
+            head = nd;
+            tail = head;
         }
         else{
-            nd.data = value;
             nd.next = head;
             head = nd;
-            size++;
         }
+
+        size++;
     }
     public Integer removeFromFront(){
-        if(head != null){
-            temp = head.data;
+        if(size == 0){
+            return null;
+        }
+        else{
+            Integer temp = head.data;
             head = head.next;
             size--;
+            return temp;
         }
-        return temp;
+        
     }
     public void addToTail(Integer value){
         Node nd = new Node();
-        if(tail == null){
-            tail.data = value;
-            size++;
+        nd.data = value;
+        if(head == null){
+            head = nd;
+            tail = head;
         }
         else{
-            nd.data = value;
             tail.next = nd;
             tail = nd;
-            size++;
         }
+        size++;
     }
     public Integer removeFromTail(){
-        if(tail != null){
-            temp = tail.data;
-            tail = null;
-            size--;
+        if(size == 0){
+            return null;
         }
-        return temp;
+        else if(size == 1){
+            size--;
+            Integer temp = tail.data;
+            tail = null;
+            head = null;
+            return temp;
+        }
+        else{
+            Node currentNode = head;
+            Note tailNode = null;
+            While(currentNode.next != null){
+                tailNode = currentNode;
+                currentNode = currentNode.next;
+            }
+            Integer temp = currentNode.data;
+            size--;
+            tail = tailNode;
+            tail.next = null;
+            return temp;
+        }
     }
     public Integer size(){
         return size;
