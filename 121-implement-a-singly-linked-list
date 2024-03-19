@@ -27,7 +27,7 @@ public class LinkedList{
     }
     public Integer removeFromFront(){
         if(head != null){
-            temp = head.value;
+            temp = head.data;
             head = head.next;
             size--;
         }
@@ -48,7 +48,7 @@ public class LinkedList{
     }
     public Integer removeFromTail(){
         if(tail != null){
-            temp = tail.value;
+            temp = tail.data;
             tail = null;
             size--;
         }
