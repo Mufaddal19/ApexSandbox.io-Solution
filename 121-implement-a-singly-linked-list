@@ -63,7 +63,7 @@ public class LinkedList{
         }
         else{
             Node currentNode = head;
-            Note tailNode = null;
+            Node tailNode = null;
             While(currentNode.next != null){
                 tailNode = currentNode;
                 currentNode = currentNode.next;
