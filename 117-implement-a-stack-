@@ -1,6 +1,7 @@
 public class Stack {
     
-    Integer index,temp;
+    Integer index = 0;
+    Integer temp = 0;
     List<Object> objStack = new List<Object>();
     
     public void push(Object obj) {
