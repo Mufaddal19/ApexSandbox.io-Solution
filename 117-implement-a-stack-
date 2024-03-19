@@ -1,6 +1,6 @@
 public class Stack {
     
-    Integer index = -1;
+    Integer index = 0;
     Integer temp = 0;
     List<Object> objStack = new List<Object>();
     
@@ -12,9 +12,7 @@ public class Stack {
     
     public Object pop() {
         //implement pop
-        temp = index;
-        index--;
-        return objStack?.remove(temp);
+        return objStack?.remove(--index);
     }
     
     public Integer size() {
@@ -24,7 +22,7 @@ public class Stack {
     
     public Object peek(){
         //implement peek
-        return objStack.get(index);
+        return objStack.get(index-1);
     }
     
     public Boolean isEmpty() {
