@@ -1,0 +1,64 @@
+public class LinkedList{
+    
+    Node head;
+    Node tail;
+    Integer temp;
+    Integer size;
+
+    public LinkedList(){
+        head = null;
+        tail = null;
+        size = 0;
+    }
+
+    public void addToFront(Integer value){
+        Node nd = new Node();
+        if(head == null){
+            head.data = value;
+            size++;
+        }
+        else{
+            nd.data = value;
+            nd.next = head;
+            head = nd;
+            size++;
+        }
+    }
+    public Integer removeFromFront(){
+        if(head != null){
+            temp = head.value;
+            head = head.next;
+            size--
+        }
+        return temp;
+    }
+    public void addToTail(Integer value){
+        Node nd = new Node();
+        if(tail == null){
+            tail.data = value;
+            size++
+        }
+        else{
+            nd.data = value;
+            tail.next = nd;
+            tail = nd;
+            size++;
+        }
+    }
+    public Integer removeFromTail(){
+        if(tail != null){
+            temp = tail.value;
+            tail = null;
+            size--;
+        }
+        return temp;
+    }
+    public Integer size(){
+        return size;
+    }    
+}
+
+public class Node{
+    Integer data;
+    Node next;
+}
