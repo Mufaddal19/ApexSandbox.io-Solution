@@ -1,7 +1,6 @@
 public class Stack {
     
     Integer index = 0;
-    Integer temp = 0;
     List<Object> objStack = new List<Object>();
     
     public void push(Object obj) {
@@ -12,7 +11,8 @@ public class Stack {
     
     public Object pop() {
         //implement pop
-        return objStack?.remove(--index);
+        index--;
+        return objStack?.remove(index);
     }
     
     public Integer size() {
