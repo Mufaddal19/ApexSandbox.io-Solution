@@ -8,6 +8,7 @@ public class LinkedList{
     public LinkedList(){
         head = null;
         tail = null;
+        temp = 0;
         size = 0;
     }
 
@@ -28,7 +29,7 @@ public class LinkedList{
         if(head != null){
             temp = head.value;
             head = head.next;
-            size--
+            size--;
         }
         return temp;
     }
@@ -36,7 +37,7 @@ public class LinkedList{
         Node nd = new Node();
         if(tail == null){
             tail.data = value;
-            size++
+            size++;
         }
         else{
             nd.data = value;
