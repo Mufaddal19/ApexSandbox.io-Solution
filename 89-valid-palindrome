@@ -6,7 +6,7 @@ public Boolean isPalindrome(String str){
     String checkStr = matcher.replaceAll('');
     Integer i,j;
     for( i=0 , j=checkStr.length()-1; i == j ; i == j+1){
-        if(checkStr.charAt[i] == checkStr.charAt[j]){
+        if(checkStr.charAt(i) == checkStr.charAt(j)){
             continue;
         }
         else{
