@@ -5,8 +5,8 @@ public Boolean isPalindrome(String str){
     Matcher matcher = nonAlphanumeric.matcher(lowStr);
     String checkStr = matcher.replaceAll('');
     Integer i,j;
-    for( i=0 , j=checkStr.length()-1; i == j ; i == j+1){
-        if(checkStr.charAt(i) == checkStr.charAt(j)){
+    for( i=0 , j=checkStr.length()-1; i == j + 1 ; i++, j--){
+        if(checkStr.charAt(i) == checkStr.charAt(j){
             continue;
         }
         else{
